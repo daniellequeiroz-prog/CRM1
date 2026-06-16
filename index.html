@@ -136,13 +136,20 @@
   .footer-copy { font-size: 9px; color: rgba(255,255,255,0.35); letter-spacing: 0.03em; text-align: right; max-width: 60%; }
 
   @media (max-width: 768px) {
-    .slide-intro { flex-direction: column; }
-    .intro-image { flex: none; height: 240px; }
-    .intro-content { padding: 2rem 1.5rem; }
-    nav { padding: 0 1.5rem; }
+    html, body { overflow: auto; height: auto; }
+    .slides-container { position: relative; top: 0; height: calc(100svh - 56px - 44px); min-height: 500px; }
+    .slide-intro { flex-direction: column; padding: 0 !important; }
+    .intro-image { flex: none; height: 220px; width: 100%; }
+    .intro-content { padding: 1.5rem 1.25rem; flex: 1; overflow-y: auto; }
+    .intro-content h1 { font-size: 1.5rem; }
+    .intro-desc { font-size: 13px; }
+    nav { padding: 0 1rem; }
     .progress-bar { width: 80px; }
-    .slide-footer { padding: 0.75rem 1.5rem; }
+    .slide-footer { padding: 0.5rem 1rem; }
     .footer-copy { display: none; }
+    .slide-field { padding: 1.5rem 1.25rem; max-width: 100%; }
+    .field-question { font-size: 1.1rem; }
+    .field-input, .field-select { font-size: 14px; }
   }
 </style>
 </head>
